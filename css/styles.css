@@ -11124,9 +11124,32 @@ body {
   }
 }
 
+/* 2. O GRANDE SEGREDO: Máscara no GIF */
+#bg-gif-rock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+    opacity: 0.3; /* Controle a intensidade do GIF aqui */
+    /* Cria um degradê suave no próprio GIF, fazendo ele sumir no topo e na base */
+    mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 15%, 
+        black 85%, 
+        transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 15%, 
+        black 85%, 
+        transparent 100%);
+
 .about-section {
-  padding-top: 10rem;
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  background-color: #000 !important; /* Casando com o final da sua masthead */
+  padding-top: 5rem;
+  position: relative;
 }
 .about-section p {
   margin-bottom: 5rem;
